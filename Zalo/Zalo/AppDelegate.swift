@@ -16,12 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let rootViewController = ViewController()
+        let rootViewController = UINavigationController(rootViewController: CreateAccountViewController())
         self.window = UIWindow.init()
         self.window?.bounds = UIScreen.main.bounds
         self.window?.rootViewController = rootViewController
-        self.window?.backgroundColor = .systemBlue
+        self.window?.backgroundColor = .white
         self.window?.makeKeyAndVisible()
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
         return true
     }
 

@@ -9,11 +9,26 @@
 /* Begin PBXBuildFile section */
 		0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255D27F9964400232D12 /* AppDelegate.swift */; };
 		0FF7256027F9964400232D12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255F27F9964400232D12 /* SceneDelegate.swift */; };
-		0FF7256227F9964400232D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7256127F9964400232D12 /* ViewController.swift */; };
+		0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7256127F9964400232D12 /* OnboardingContainerViewController.swift */; };
 		0FF7256727F9964600232D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7256627F9964600232D12 /* Assets.xcassets */; };
 		0FF7256A27F9964600232D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7256827F9964600232D12 /* LaunchScreen.storyboard */; };
 		0FF7257527F9964600232D12 /* ZaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7257427F9964600232D12 /* ZaloTests.swift */; };
 		0FF7258027F9964600232D12 /* ZaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7257F27F9964600232D12 /* ZaloUITests.swift */; };
+		0FF7259327F998A800232D12 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7259227F998A800232D12 /* OnboardingViewController.swift */; };
+		0FF7259527F99AF000232D12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7259427F99AF000232D12 /* Constants.swift */; };
+		0FF7259A27F9A39300232D12 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7259927F9A39300232D12 /* CustomLabel.swift */; };
+		0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF725D427FBE17000232D12 /* UIColor+Utils.swift */; };
+		0FF725D727FBF05C00232D12 /* MainOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF725D627FBF05C00232D12 /* MainOnboardingViewController.swift */; };
+		0FF725DA27FBFCE900232D12 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF725D927FBFCE900232D12 /* CustomButton.swift */; };
+		0FF725DC27FC01A000232D12 /* NoImageOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF725DB27FC01A000232D12 /* NoImageOnboardingViewController.swift */; };
+		0FF725E127FC388800232D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF725E027FC388800232D12 /* SignInViewController.swift */; };
+		0FF7265927FD2FDA00232D12 /* AuthenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7265827FD2FDA00232D12 /* AuthenTextField.swift */; };
+		0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7265A27FD30E000232D12 /* SignInView.swift */; };
+		0FF7265E27FD398900232D12 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7265D27FD398900232D12 /* UIViewController+Utils.swift */; };
+		0FF7266027FD3B2900232D12 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7265F27FD3B2900232D12 /* UITextField+Utils.swift */; };
+		0FF7266327FDCFC900232D12 /* AuthenCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266227FDCFC900232D12 /* AuthenCriteria.swift */; };
+		0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266427FEA2FA00232D12 /* GrayDescriptionBarView.swift */; };
+		0FF7266927FEA5E800232D12 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266827FEA5E800232D12 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +52,7 @@
 		0FF7255A27F9964400232D12 /* Zalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7255D27F9964400232D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF7255F27F9964400232D12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FF7256127F9964400232D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FF7256127F9964400232D12 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		0FF7256627F9964600232D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FF7256927F9964600232D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF7256B27F9964600232D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +112,7 @@
 		0FF7255C27F9964400232D12 /* Zalo */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7259727F9A37C00232D12 /* CustomUI */,
 				0FF7259027F996C300232D12 /* Utils */,
 				0FF7258F27F996BF00232D12 /* Model */,
 				0FF7258E27F996BB00232D12 /* View */,
@@ -138,7 +154,8 @@
 		0FF7258E27F996BB00232D12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0FF7256127F9964400232D12 /* ViewController.swift */,
+				0FF725DF27FC387700232D12 /* Authen */,
+				0FF7259127F9988900232D12 /* Onboarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,8 +170,93 @@
 		0FF7259027F996C300232D12 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7259427F99AF000232D12 /* Constants.swift */,
+				0FF725D427FBE17000232D12 /* UIColor+Utils.swift */,
+				0FF7265D27FD398900232D12 /* UIViewController+Utils.swift */,
+				0FF7265F27FD3B2900232D12 /* UITextField+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0FF7259127F9988900232D12 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7256127F9964400232D12 /* OnboardingContainerViewController.swift */,
+				0FF7259227F998A800232D12 /* OnboardingViewController.swift */,
+				0FF725D627FBF05C00232D12 /* MainOnboardingViewController.swift */,
+				0FF725DB27FC01A000232D12 /* NoImageOnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0FF7259727F9A37C00232D12 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7265C27FD396E00232D12 /* ViewController */,
+				0FF725D827FBFCC200232D12 /* Buttons */,
+				0FF7259827F9A38200232D12 /* Labels */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		0FF7259827F9A38200232D12 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7259927F9A39300232D12 /* CustomLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		0FF725D827FBFCC200232D12 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0FF725D927FBFCE900232D12 /* CustomButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0FF725DF27FC387700232D12 /* Authen */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7266727FEA55500232D12 /* SignUp */,
+				0FF7266627FEA54600232D12 /* SignIn */,
+				0FF7266127FDCFB000232D12 /* Criteria */,
+				0FF7265827FD2FDA00232D12 /* AuthenTextField.swift */,
+				0FF7266427FEA2FA00232D12 /* GrayDescriptionBarView.swift */,
+			);
+			path = Authen;
+			sourceTree = "<group>";
+		};
+		0FF7265C27FD396E00232D12 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0FF7266127FDCFB000232D12 /* Criteria */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7266227FDCFC900232D12 /* AuthenCriteria.swift */,
+			);
+			path = Criteria;
+			sourceTree = "<group>";
+		};
+		0FF7266627FEA54600232D12 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				0FF725E027FC388800232D12 /* SignInViewController.swift */,
+				0FF7265A27FD30E000232D12 /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		0FF7266727FEA55500232D12 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7266827FEA5E800232D12 /* CreateAccountViewController.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +388,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF7256227F9964400232D12 /* ViewController.swift in Sources */,
+				0FF725E127FC388800232D12 /* SignInViewController.swift in Sources */,
+				0FF7259527F99AF000232D12 /* Constants.swift in Sources */,
+				0FF7265E27FD398900232D12 /* UIViewController+Utils.swift in Sources */,
+				0FF7259A27F9A39300232D12 /* CustomLabel.swift in Sources */,
+				0FF725DA27FBFCE900232D12 /* CustomButton.swift in Sources */,
+				0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */,
+				0FF7266927FEA5E800232D12 /* CreateAccountViewController.swift in Sources */,
+				0FF725DC27FC01A000232D12 /* NoImageOnboardingViewController.swift in Sources */,
+				0FF7266327FDCFC900232D12 /* AuthenCriteria.swift in Sources */,
 				0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */,
+				0FF725D727FBF05C00232D12 /* MainOnboardingViewController.swift in Sources */,
 				0FF7256027F9964400232D12 /* SceneDelegate.swift in Sources */,
+				0FF7266027FD3B2900232D12 /* UITextField+Utils.swift in Sources */,
+				0FF7259327F998A800232D12 /* OnboardingViewController.swift in Sources */,
+				0FF7265927FD2FDA00232D12 /* AuthenTextField.swift in Sources */,
+				0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */,
+				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
+				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
