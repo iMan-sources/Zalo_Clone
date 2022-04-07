@@ -53,7 +53,8 @@ class AuthenTextField: UIView {
     
     convenience init(placeholder: String) {
         self.init(frame: .zero)
-        textfield.placeholder = placeholder
+        textfield.attributedPlaceholder = makeAttributePlaceholder(text: placeholder)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -73,6 +74,15 @@ class AuthenTextField: UIView {
     // MARK: - API
     
     // MARK: - Helper
+    
+    private func makeAttributePlaceholder(text: String) -> NSAttributedString{
+        var plainAttrs = [NSAttributedString.Key: AnyObject]()
+        plainAttrs[.foregroundColor] = UIColor.darkGray
+        plainAttrs[.font] = UIFont.preferredFont(forTextStyle: .callout)
+        let attrs = NSMutableAttributedString(string: text, attributes: plainAttrs)
+        
+        return attrs
+    }
 }
 // MARK: - Extension
 
