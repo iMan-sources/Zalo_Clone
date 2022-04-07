@@ -26,7 +26,7 @@ class SignInViewController: UIViewController {
 
     private lazy var signInButton = CustomButton(text: "Đăng nhập", textColor: .white, backgroundColor: .blueThirdZalo, font: UIFont.preferredFont(forTextStyle: .headline))
     // MARK: - Properties
-    
+    typealias customValidation = SignInView.textfieldValidation
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,12 @@ class SignInViewController: UIViewController {
     
     @objc func forgetBtnTapped(_ button: UIButton){
         print("DEBUG: forget Btn tapped")
+        
+    }
+    
+    @objc func signInBtnTapped(_ button: UIButton){
+        print("DEBUG: sign In button tapped")
+        signInView.validation()
     }
     
     // MARK: - API
@@ -68,6 +74,9 @@ extension SignInViewController {
     func style(){
         view.backgroundColor = .white        
         signInView.delegate = self
+//        signInButton.isUserInteractionEnabled = false
+        
+        signInButton.addTarget(self, action: #selector(signInBtnTapped(_:)), for: .touchUpInside)
         signInButton.isUserInteractionEnabled = false
     }
     func layout(){
@@ -114,6 +123,7 @@ extension SignInViewController {
 extension SignInViewController: SignInViewDelegate {
     func enableSignInButtonInteract() {
         signInButton.backgroundColor = signInView.userTextFieldAndPasswordTextFieldIsCompleted() ? .blueZalo : .blueThirdZalo
+//        print(signInView.userTextFieldAndPasswordTextFieldIsCompleted())
         signInButton.isUserInteractionEnabled = signInView.userTextFieldAndPasswordTextFieldIsCompleted() ? true : false
     }
     

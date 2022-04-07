@@ -62,6 +62,21 @@
 		0FF7257B27F9964600232D12 /* ZaloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7257F27F9964600232D12 /* ZaloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaloUITests.swift; sourceTree = "<group>"; };
 		0FF7258127F9964600232D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF7259227F998A800232D12 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		0FF7259427F99AF000232D12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0FF7259927F9A39300232D12 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		0FF725D427FBE17000232D12 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		0FF725D627FBF05C00232D12 /* MainOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOnboardingViewController.swift; sourceTree = "<group>"; };
+		0FF725D927FBFCE900232D12 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0FF725DB27FC01A000232D12 /* NoImageOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoImageOnboardingViewController.swift; sourceTree = "<group>"; };
+		0FF725E027FC388800232D12 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0FF7265827FD2FDA00232D12 /* AuthenTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenTextField.swift; sourceTree = "<group>"; };
+		0FF7265A27FD30E000232D12 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0FF7265D27FD398900232D12 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		0FF7265F27FD3B2900232D12 /* UITextField+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Utils.swift"; sourceTree = "<group>"; };
+		0FF7266227FDCFC900232D12 /* AuthenCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenCriteria.swift; sourceTree = "<group>"; };
+		0FF7266427FEA2FA00232D12 /* GrayDescriptionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayDescriptionBarView.swift; sourceTree = "<group>"; };
+		0FF7266827FEA5E800232D12 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

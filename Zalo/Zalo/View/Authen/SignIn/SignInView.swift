@@ -69,6 +69,10 @@ class SignInView: UIView {
             if !AuthenCriteria.nonSpecialCharacterMet(text) {
                 return (false, "Tài khoản không được chứa kí tự đặc biệt")
             }
+            
+            if !self.userTextFieldCriteriaMet(text) {
+                return(false, "Tài khoản không hợp lệ")
+            }
             return (true, "")
         }
         customValidation = newPhoneCriteria
@@ -81,7 +85,6 @@ class SignInView: UIView {
            
             return AuthenCriteria.nonSpecialCharacterMet(text)
         case .numberPad:
-            print("DEBUG: \(AuthenCriteria.isNumberAndLength(text))")
             return AuthenCriteria.isNumberAndLength(text)
         default:
             return true
@@ -98,10 +101,13 @@ class SignInView: UIView {
         }
     }
     
+    func resetErrorLabel(){
+        errorlabel.removeFromSuperview()
+    }
+    
     func userTextFieldAndPasswordTextFieldIsCompleted() -> Bool{
         return !usernameTextfield.textfield.text!.isEmpty &&
-        !passwordTextfield.textfield.text!.isEmpty &&
-            userTextFieldCriteriaMet(usernameTextfield.textfield.text ?? "")
+        !passwordTextfield.textfield.text!.isEmpty
     }
 }
 // MARK: - Extension
@@ -135,16 +141,13 @@ extension SignInView {
 
 extension SignInView: AuthenTextFieldDelgate {
     func didTextFieldChanged(_ sender: AuthenTextField) {
-        validation()
-        
+        resetErrorLabel()
         delegate?.enableSignInButtonInteract()
         
     }
     
     func didTextFieldEndEditing(_ sender: AuthenTextField) {
-        if !userTextFieldCriteriaMet(usernameTextfield.textfield.text ?? "") {
-            updateErrorLabel("Tài khoản không hợp lệ")
-        }
+        delegate?.enableSignInButtonInteract()
     }
 }
 
