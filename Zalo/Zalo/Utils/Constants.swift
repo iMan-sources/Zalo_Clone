@@ -17,4 +17,8 @@ enum Image {
     static let chevronLeft = UIImage(systemName: "chevron.left")!
     static let numberRectangle = UIImage(systemName: "textformat.123")!
     static let alphabet = UIImage(systemName: "textformat.abc")!
+    
+    static let circleImage = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
+    static let checkmarkImage = UIImage(systemName: "checkmark.circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
+    static let xmarkImage = UIImage(systemName: "xmark.circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
 }

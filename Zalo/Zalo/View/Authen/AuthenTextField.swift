@@ -21,7 +21,7 @@ class AuthenTextField: UIView {
         return textfield
     }()
     
-    private let dividerView: UIView = {
+    let dividerView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .lightGray
@@ -29,7 +29,7 @@ class AuthenTextField: UIView {
         return view
     }()
     
-    private let stackView: UIStackView = {
+    let stackView: UIStackView = {
        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 16
@@ -87,12 +87,12 @@ class AuthenTextField: UIView {
 // MARK: - Extension
 
 extension AuthenTextField {
-    private func style(){
+    func style(){
         translatesAutoresizingMaskIntoConstraints = false
         textfield.delegate = self
     }
     
-    private func layout(){
+    func layout(){
         addSubview(stackView)
         stackView.addArrangedSubview(textfield)
         stackView.addArrangedSubview(dividerView)
@@ -122,7 +122,7 @@ extension AuthenTextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         self.dividerHeightAnchor.constant = 2
-        UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn, animations: {
             self.dividerHeightAnchor.constant = 2
             self.dividerView.backgroundColor = .cyanBlueZalo
             self.layoutIfNeeded()
