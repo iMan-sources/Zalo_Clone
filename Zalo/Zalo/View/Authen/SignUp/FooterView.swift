@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol FooterViewDelegate: AnyObject {
+    func didNextButtonTapped()
+}
 class FooterView: UIView {
     // MARK: - Subview
     private let label: UILabel = {
@@ -35,6 +37,8 @@ class FooterView: UIView {
     // MARK: - Properties
     private let buttonDimension: CGFloat = 42
     
+    weak var delegate: FooterViewDelegate?
+    
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,14 +51,11 @@ class FooterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //give default size, if they put into stackview, this view will know how to size itself
-//    override var intrinsicContentSize: CGSize {
-//        return CGSize(width: 200, height: 200)
-//    }
+
     
     // MARK: - Selector
     @objc func nextButtonTapped(_ sender: UIButton){
-        print("DEBUG: nextButtonTapped")
+        delegate?.didNextButtonTapped()
     }
     
     // MARK: - API

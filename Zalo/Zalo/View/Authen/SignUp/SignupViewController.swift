@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, FooterViewDelegate {
     // MARK: - Subview
     var textField: NameTextField!
     let footerView = FooterView()
@@ -17,10 +17,18 @@ class SignupViewController: UIViewController {
     // MARK: - Lifecycle    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        footerView.delegate = self
+        toolbarView.delegate = self
         setupFooterView()
+        configureNavBar()
     }
-    
+
     // MARK: - Selector
+    @objc func backButtonTapped(_ sender: UIButton){
+        //back to onBoardingVc
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - API
     
@@ -41,5 +49,17 @@ class SignupViewController: UIViewController {
             
         ])
     }
+    
+    func configureNavBar(){
+        self.navigationController?.navigationBar.barTintColor = .blueZalo
+        self.navigationController?.navigationBar.barStyle = .black
+        self.title = "Tạo tài khoản"
+        let leftBarItem = UIBarButtonItem(image: Image.chevronLeft, style: .plain, target: self, action: #selector(backButtonTapped(_:)))
+        self.navigationItem.leftBarButtonItems = [leftBarItem]
+    }
+    
+    //to override
+    func didNextButtonTapped() {}
 }
+
 

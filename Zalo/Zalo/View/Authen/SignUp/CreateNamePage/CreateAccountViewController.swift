@@ -28,28 +28,18 @@ class CreateAccountViewController: SignupViewController {
         setupNameTextFieldCriteria()
         setDoneOnKeyboard()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureNavBar()
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        textField.resignFirstResponder()
+        textField.endEditing(true)
     }
-    
     // MARK: - Selector
-    @objc func backButtonTapped(_ sender: UIButton){
-        //back to onBoardingVc
-        self.navigationController?.popToRootViewController(animated: true)
-    }
     
     // MARK: - API
     
     // MARK: - Helper
-    private func configureNavBar(){
-        self.navigationController?.navigationBar.barTintColor = .blueZalo
-        self.navigationController?.navigationBar.barStyle = .black
-        self.title = "Tạo tài khoản"
-        let leftBarItem = UIBarButtonItem(image: Image.chevronLeft, style: .plain, target: self, action: #selector(backButtonTapped(_:)))
-        self.navigationItem.leftBarButtonItems = [leftBarItem]
-    }
+
     
     private func enableNextButton(){
         if !(textField.textfield.text!.isEmpty) && criteriaStatusView.isMatchAllCriteria {
@@ -66,7 +56,6 @@ class CreateAccountViewController: SignupViewController {
     }
     
     func style() {
-        view.backgroundColor = .white
         label.text = "Tên Zalo"
         textField = NameTextField(placeholder: "Gồm 2-40 kí tự")
 //        nameTextField = textField
@@ -113,9 +102,15 @@ class CreateAccountViewController: SignupViewController {
         ])
 
     }
+    
+    override func didNextButtonTapped() {
+        // move to create phone controller
+        let vc = CreatePhoneViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 // MARK: - Extension
-extension CreateAccountViewController {
+extension CreateAccountViewController{
     
 
 }
@@ -159,6 +154,4 @@ extension CreateAccountViewController: AuthenTextFieldDelgate {
             enableNextButton()
         }
     }
-    
-    
 }

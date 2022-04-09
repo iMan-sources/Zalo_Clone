@@ -35,6 +35,7 @@
 		0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267027FFCFDF00232D12 /* NameTextField.swift */; };
 		0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267227FFDF1300232D12 /* FooterView.swift */; };
 		0FF726922801B66B00232D12 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726912801B66B00232D12 /* SignupViewController.swift */; };
+		0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0FF7267027FFCFDF00232D12 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
 		0FF7267227FFDF1300232D12 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		0FF726912801B66B00232D12 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 		0FF7266727FEA55500232D12 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				0FF726932801BE6A00232D12 /* CreatePhonePage */,
 				0FF7267427FFDF1B00232D12 /* CreateNamePage */,
 				0FF7267227FFDF1300232D12 /* FooterView.swift */,
 				0FF726912801B66B00232D12 /* SignupViewController.swift */,
@@ -298,6 +301,14 @@
 				0FF7267027FFCFDF00232D12 /* NameTextField.swift */,
 			);
 			path = CreateNamePage;
+			sourceTree = "<group>";
+		};
+		0FF726932801BE6A00232D12 /* CreatePhonePage */ = {
+			isa = PBXGroup;
+			children = (
+				0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */,
+			);
+			path = CreatePhonePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +462,7 @@
 				0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */,
 				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
+				0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
 				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
 			);
