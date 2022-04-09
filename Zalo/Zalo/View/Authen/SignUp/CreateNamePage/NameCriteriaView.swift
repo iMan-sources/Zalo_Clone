@@ -101,3 +101,10 @@ extension NameCriteriaView {
     }
 }
 
+extension NameCriteriaView {
+    var isCheckedImage: Bool {
+        return isCriteriaMet
+    }
+    
+}
+

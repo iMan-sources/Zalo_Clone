@@ -16,6 +16,9 @@ class CreateAccountViewController: UIViewController {
     private let warningSetNameLabel = CustomLabel(content: "Lưu ý khi đặt tên", color: .black, alignment: .left, fontFamily: UIFont.preferredFont(forTextStyle: .body))
     
     private let criteriaStatusView = NameCriteriaStatusView()
+    
+    private let footerView = FooterView()
+    let toolbarView = FooterView()
     // MARK: - Properties
     
     // MARK: - Lifecycle
@@ -25,6 +28,7 @@ class CreateAccountViewController: UIViewController {
         layout()
         setupDissmissKeyboard()
         setupNameTextFieldCriteria()
+        setDoneOnKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,21 +52,37 @@ class CreateAccountViewController: UIViewController {
         let leftBarItem = UIBarButtonItem(image: Image.chevronLeft, style: .plain, target: self, action: #selector(backButtonTapped(_:)))
         self.navigationItem.leftBarButtonItems = [leftBarItem]
     }
+    
+    private func enableNextButton(){
+        print("DEBUG: \(criteriaStatusView.isMatchAllCriteria)")
+        
+        if !(nameTextField.textfield.text!.isEmpty) && criteriaStatusView.isMatchAllCriteria {
+            footerView.nextButton.isUserInteractionEnabled = true
+            footerView.nextButton.backgroundColor = .blueZalo
+            toolbarView.nextButton.backgroundColor = .blueZalo
+            toolbarView.nextButton.isUserInteractionEnabled = true
+        }else{
+            footerView.nextButton.isUserInteractionEnabled = false
+            toolbarView.nextButton.isUserInteractionEnabled = false
+            footerView.nextButton.backgroundColor = .lightBlueGrayZalo
+            toolbarView.nextButton.backgroundColor = .lightBlueGrayZalo
+        }
+    }
 }
 // MARK: - Extension
 extension CreateAccountViewController {
     
     func style(){
         view.backgroundColor = .white
-        
         label.text = "Tên Zalo"
-        
     }
     func layout(){
         view.addSubview(label)
         view.addSubview(nameTextField)
         view.addSubview(warningSetNameLabel)
         view.addSubview(criteriaStatusView)
+        
+        view.addSubview(footerView)
         //label
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 3),
@@ -93,6 +113,14 @@ extension CreateAccountViewController {
             criteriaStatusView.trailingAnchor.constraint(equalTo: warningSetNameLabel.trailingAnchor)
         
         ])
+        
+//        //footerView
+        NSLayoutConstraint.activate([
+            footerView.leadingAnchor.constraint(equalTo: warningSetNameLabel.leadingAnchor),
+            footerView.trailingAnchor.constraint(equalTo: warningSetNameLabel.trailingAnchor),
+            footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+
+        ])
     }
 }
 
@@ -101,7 +129,7 @@ extension CreateAccountViewController {
         let nameValidation: CustomValidation = { text in
             guard let text = text, !text.isEmpty else{
                 return (false, "enter yout password")
-            }
+            } 
             // criteria met
             self.criteriaStatusView.updateDisplay(text)
             
@@ -110,21 +138,36 @@ extension CreateAccountViewController {
         nameTextField.customValidation = nameValidation
         nameTextField.delegate = self
     }
+    
+    func setDoneOnKeyboard(){
+        let keyboardToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 60))
+        let barView = UIBarButtonItem(customView: toolbarView)
+        keyboardToolBar.items = [barView]
+        nameTextField.textfield.inputAccessoryView = keyboardToolBar
+        
+
+    }
+    @objc func dissmissKeyboard(){
+        view.endEditing(true)
+    }
 }
 
 extension CreateAccountViewController: AuthenTextFieldDelgate {
     func didTextFieldEndEditing(_ sender: AuthenTextField) {
         if sender === nameTextField {
             // not reset to cirle image
-            print("DEBUG: name tf end editing")
             criteriaStatusView.shouldResetCriteria = false
+            
             _ = nameTextField.validation()
+            
+            enableNextButton()
         }
     }
     
     func didTextFieldChanged(_ sender: AuthenTextField) {
         if sender === nameTextField {
             criteriaStatusView.updateDisplay(sender.textfield.text ?? "")
+            enableNextButton()
         }
     }
     

@@ -33,6 +33,7 @@
 		0FF7266D27FFCC2F00232D12 /* NameCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266C27FFCC2F00232D12 /* NameCriteriaView.swift */; };
 		0FF7266F27FFCDFF00232D12 /* NameCriteriaStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266E27FFCDFF00232D12 /* NameCriteriaStatusView.swift */; };
 		0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267027FFCFDF00232D12 /* NameTextField.swift */; };
+		0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267227FFDF1300232D12 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		0FF7266C27FFCC2F00232D12 /* NameCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCriteriaView.swift; sourceTree = "<group>"; };
 		0FF7266E27FFCDFF00232D12 /* NameCriteriaStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCriteriaStatusView.swift; sourceTree = "<group>"; };
 		0FF7267027FFCFDF00232D12 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		0FF7267227FFDF1300232D12 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,12 +280,21 @@
 		0FF7266727FEA55500232D12 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7267427FFDF1B00232D12 /* CreateNamePage */,
+				0FF7267227FFDF1300232D12 /* FooterView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0FF7267427FFDF1B00232D12 /* CreateNamePage */ = {
+			isa = PBXGroup;
+			children = (
 				0FF7266827FEA5E800232D12 /* CreateAccountViewController.swift */,
 				0FF7266C27FFCC2F00232D12 /* NameCriteriaView.swift */,
 				0FF7266E27FFCDFF00232D12 /* NameCriteriaStatusView.swift */,
 				0FF7267027FFCFDF00232D12 /* NameTextField.swift */,
 			);
-			path = SignUp;
+			path = CreateNamePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +448,7 @@
 				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
+				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

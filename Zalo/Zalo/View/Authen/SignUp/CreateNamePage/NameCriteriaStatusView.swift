@@ -13,7 +13,7 @@ class NameCriteriaStatusView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 8
-        
+        stackView.distribution = .equalCentering
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -23,6 +23,9 @@ class NameCriteriaStatusView: UIView {
     // MARK: - Properties
     var shouldResetCriteria: Bool = true
     
+    var isMatchAllCriteria: Bool {
+        return nonSpecialCharacterCriteriaView.isCriteriaMet && lengthCriteriaView.isCriteriaMet
+    }
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,9 +39,9 @@ class NameCriteriaStatusView: UIView {
     }
     
     //give default size, if they put into stackview, this view will know how to size itself
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: 200, height: 200)
-    }
+//    override var intrinsicContentSize: CGSize {
+//        return CGSize(width: 200, height: 200)
+//    }
     
     // MARK: - Selector
     
@@ -62,7 +65,10 @@ class NameCriteriaStatusView: UIView {
             nonSpecialCharacterCriteriaView.isCriteriaMet = noSpecialCharacter
         }
         
+        
     }
+    
+    
 }
 // MARK: - Extension
 
@@ -79,9 +85,11 @@ extension NameCriteriaStatusView {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
+
+
 

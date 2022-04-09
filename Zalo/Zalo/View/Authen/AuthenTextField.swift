@@ -90,6 +90,7 @@ extension AuthenTextField {
     func style(){
         translatesAutoresizingMaskIntoConstraints = false
         textfield.delegate = self
+        textfield.autocorrectionType = .no
     }
     
     func layout(){
@@ -142,6 +143,7 @@ extension AuthenTextField: UITextFieldDelegate {
             self.dividerView.backgroundColor = .lightGray
             self.layoutIfNeeded()
         }, completion: nil)
+        
         delegate?.didTextFieldEndEditing(self)
     }
 }

@@ -21,4 +21,6 @@ enum Image {
     static let circleImage = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
     static let checkmarkImage = UIImage(systemName: "checkmark.circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
     static let xmarkImage = UIImage(systemName: "xmark.circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
+    
+    static let nextImage = UIImage(systemName: "arrow.right")!.withTintColor(.white, renderingMode: .alwaysOriginal)
 }
