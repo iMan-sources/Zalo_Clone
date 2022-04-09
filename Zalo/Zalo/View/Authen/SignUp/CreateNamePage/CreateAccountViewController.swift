@@ -7,18 +7,16 @@
 import UIKit
 // MARK: - Typealias
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: SignupViewController {
     typealias CustomValidation = NameTextField.CustomValidation
     // MARK: - Subview
     private let label = CustomLabel(content: "Tên Zalo", color: .black, alignment: .left, fontFamily: UIFont.preferredFont(forTextStyle: .title3))
-    let nameTextField = NameTextField(placeholder: "Gồm 2-40 kí tự")
-    
+//    var textField: NameTextField!
+   
     private let warningSetNameLabel = CustomLabel(content: "Lưu ý khi đặt tên", color: .black, alignment: .left, fontFamily: UIFont.preferredFont(forTextStyle: .body))
     
     private let criteriaStatusView = NameCriteriaStatusView()
-    
-    private let footerView = FooterView()
-    let toolbarView = FooterView()
+
     // MARK: - Properties
     
     // MARK: - Lifecycle
@@ -54,9 +52,7 @@ class CreateAccountViewController: UIViewController {
     }
     
     private func enableNextButton(){
-        print("DEBUG: \(criteriaStatusView.isMatchAllCriteria)")
-        
-        if !(nameTextField.textfield.text!.isEmpty) && criteriaStatusView.isMatchAllCriteria {
+        if !(textField.textfield.text!.isEmpty) && criteriaStatusView.isMatchAllCriteria {
             footerView.nextButton.isUserInteractionEnabled = true
             footerView.nextButton.backgroundColor = .blueZalo
             toolbarView.nextButton.backgroundColor = .blueZalo
@@ -68,21 +64,23 @@ class CreateAccountViewController: UIViewController {
             toolbarView.nextButton.backgroundColor = .lightBlueGrayZalo
         }
     }
-}
-// MARK: - Extension
-extension CreateAccountViewController {
     
-    func style(){
+    func style() {
         view.backgroundColor = .white
         label.text = "Tên Zalo"
+        textField = NameTextField(placeholder: "Gồm 2-40 kí tự")
+//        nameTextField = textField
+        
     }
+
     func layout(){
         view.addSubview(label)
-        view.addSubview(nameTextField)
+        view.addSubview(textField)
         view.addSubview(warningSetNameLabel)
         view.addSubview(criteriaStatusView)
         
         view.addSubview(footerView)
+        
         //label
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 3),
@@ -92,15 +90,15 @@ extension CreateAccountViewController {
         
         //textfield
         NSLayoutConstraint.activate([
-            nameTextField.topAnchor.constraint(equalToSystemSpacingBelow: label.safeAreaLayoutGuide.bottomAnchor, multiplier: 2),
-            nameTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: nameTextField.trailingAnchor, multiplier: 2)
+            textField.topAnchor.constraint(equalToSystemSpacingBelow: label.safeAreaLayoutGuide.bottomAnchor, multiplier: 2),
+            textField.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: textField.trailingAnchor, multiplier: 2)
         
         ])
         
         //warningSetNameLabel
         NSLayoutConstraint.activate([
-            warningSetNameLabel.topAnchor.constraint(equalToSystemSpacingBelow: nameTextField.safeAreaLayoutGuide.bottomAnchor, multiplier: 2),
+            warningSetNameLabel.topAnchor.constraint(equalToSystemSpacingBelow: textField.safeAreaLayoutGuide.bottomAnchor, multiplier: 2),
             warningSetNameLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: warningSetNameLabel.trailingAnchor, multiplier: 2)
             
@@ -113,15 +111,13 @@ extension CreateAccountViewController {
             criteriaStatusView.trailingAnchor.constraint(equalTo: warningSetNameLabel.trailingAnchor)
         
         ])
-        
-//        //footerView
-        NSLayoutConstraint.activate([
-            footerView.leadingAnchor.constraint(equalTo: warningSetNameLabel.leadingAnchor),
-            footerView.trailingAnchor.constraint(equalTo: warningSetNameLabel.trailingAnchor),
-            footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
 
-        ])
     }
+}
+// MARK: - Extension
+extension CreateAccountViewController {
+    
+
 }
 
 extension CreateAccountViewController {
@@ -135,18 +131,11 @@ extension CreateAccountViewController {
             
             return (true, "")
         }
-        nameTextField.customValidation = nameValidation
-        nameTextField.delegate = self
+        textField.customValidation = nameValidation
+        textField.delegate = self
     }
     
-    func setDoneOnKeyboard(){
-        let keyboardToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 60))
-        let barView = UIBarButtonItem(customView: toolbarView)
-        keyboardToolBar.items = [barView]
-        nameTextField.textfield.inputAccessoryView = keyboardToolBar
-        
 
-    }
     @objc func dissmissKeyboard(){
         view.endEditing(true)
     }
@@ -154,18 +143,18 @@ extension CreateAccountViewController {
 
 extension CreateAccountViewController: AuthenTextFieldDelgate {
     func didTextFieldEndEditing(_ sender: AuthenTextField) {
-        if sender === nameTextField {
+        if sender === textField {
             // not reset to cirle image
             criteriaStatusView.shouldResetCriteria = false
             
-            _ = nameTextField.validation()
+            _ = textField.validation()
             
             enableNextButton()
         }
     }
     
     func didTextFieldChanged(_ sender: AuthenTextField) {
-        if sender === nameTextField {
+        if sender === textField {
             criteriaStatusView.updateDisplay(sender.textfield.text ?? "")
             enableNextButton()
         }

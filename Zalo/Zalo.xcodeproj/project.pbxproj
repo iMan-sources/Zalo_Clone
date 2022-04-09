@@ -34,6 +34,7 @@
 		0FF7266F27FFCDFF00232D12 /* NameCriteriaStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7266E27FFCDFF00232D12 /* NameCriteriaStatusView.swift */; };
 		0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267027FFCFDF00232D12 /* NameTextField.swift */; };
 		0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267227FFDF1300232D12 /* FooterView.swift */; };
+		0FF726922801B66B00232D12 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726912801B66B00232D12 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		0FF7266E27FFCDFF00232D12 /* NameCriteriaStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCriteriaStatusView.swift; sourceTree = "<group>"; };
 		0FF7267027FFCFDF00232D12 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
 		0FF7267227FFDF1300232D12 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		0FF726912801B66B00232D12 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			children = (
 				0FF7267427FFDF1B00232D12 /* CreateNamePage */,
 				0FF7267227FFDF1300232D12 /* FooterView.swift */,
+				0FF726912801B66B00232D12 /* SignupViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				0FF7259327F998A800232D12 /* OnboardingViewController.swift in Sources */,
 				0FF7265927FD2FDA00232D12 /* AuthenTextField.swift in Sources */,
 				0FF7266F27FFCDFF00232D12 /* NameCriteriaStatusView.swift in Sources */,
+				0FF726922801B66B00232D12 /* SignupViewController.swift in Sources */,
 				0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */,
 				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
