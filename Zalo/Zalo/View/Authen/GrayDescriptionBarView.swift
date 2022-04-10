@@ -9,11 +9,16 @@ import UIKit
 
 class GrayDescriptionBarView: UIView {
     // MARK: - Subview
-    private let descriptionLabel = CustomLabel(content: "Bạn có thể đăng nhập bằng số điện thoại hoặc username", color: .darkGrayZalo, alignment: .left, fontFamily: UIFont.systemFont(ofSize: 15))
+    private let descriptionLabel = CustomLabel(content: "Bạn có thể đăng nhập bằng số điện thoại hoặc username", color: .darkGray, alignment: .left, fontFamily: UIFont.systemFont(ofSize: 15))
     
     // MARK: - Properties
     
     // MARK: - Lifecycle
+    convenience init(content: String) {
+        self.init(frame: .zero)
+        descriptionLabel.text = content
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

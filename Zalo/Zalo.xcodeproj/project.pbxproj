@@ -36,6 +36,11 @@
 		0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7267227FFDF1300232D12 /* FooterView.swift */; };
 		0FF726922801B66B00232D12 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726912801B66B00232D12 /* SignupViewController.swift */; };
 		0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */; };
+		0FF726AB28028D9000232D12 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726AA28028D9000232D12 /* CountryManager.swift */; };
+		0FF726AD2802F27600232D12 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726AC2802F27600232D12 /* Configs.swift */; };
+		0FF726AF2802F2AD00232D12 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726AE2802F2AD00232D12 /* BaseError.swift */; };
+		0FF726B12802F3AC00232D12 /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726B02802F3AC00232D12 /* CountryName.swift */; };
+		0FF726B32802F62500232D12 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726B22802F62500232D12 /* CountryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +96,11 @@
 		0FF7267227FFDF1300232D12 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		0FF726912801B66B00232D12 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePhoneViewController.swift; sourceTree = "<group>"; };
+		0FF726AA28028D9000232D12 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		0FF726AC2802F27600232D12 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		0FF726AE2802F2AD00232D12 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		0FF726B02802F3AC00232D12 /* CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
+		0FF726B22802F62500232D12 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,7 @@
 		0FF7255C27F9964400232D12 /* Zalo */ = {
 			isa = PBXGroup;
 			children = (
+				0FF726A928028D5A00232D12 /* NetworkManager */,
 				0FF7259727F9A37C00232D12 /* CustomUI */,
 				0FF7259027F996C300232D12 /* Utils */,
 				0FF7258F27F996BF00232D12 /* Model */,
@@ -176,6 +187,7 @@
 		0FF7258D27F996B100232D12 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0FF726B42802F62C00232D12 /* Signup */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 		0FF7258F27F996BF00232D12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0FF726B02802F3AC00232D12 /* CountryName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +322,24 @@
 				0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */,
 			);
 			path = CreatePhonePage;
+			sourceTree = "<group>";
+		};
+		0FF726A928028D5A00232D12 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				0FF726AA28028D9000232D12 /* CountryManager.swift */,
+				0FF726AC2802F27600232D12 /* Configs.swift */,
+				0FF726AE2802F2AD00232D12 /* BaseError.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		0FF726B42802F62C00232D12 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				0FF726B22802F62500232D12 /* CountryViewModel.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +479,9 @@
 				0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */,
 				0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */,
 				0FF7266927FEA5E800232D12 /* CreateAccountViewController.swift in Sources */,
+				0FF726B12802F3AC00232D12 /* CountryName.swift in Sources */,
+				0FF726B32802F62500232D12 /* CountryViewModel.swift in Sources */,
+				0FF726AD2802F27600232D12 /* Configs.swift in Sources */,
 				0FF725DC27FC01A000232D12 /* NoImageOnboardingViewController.swift in Sources */,
 				0FF7266327FDCFC900232D12 /* AuthenCriteria.swift in Sources */,
 				0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */,
@@ -462,9 +496,11 @@
 				0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */,
 				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
+				0FF726AB28028D9000232D12 /* CountryManager.swift in Sources */,
 				0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
 				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
+				0FF726AF2802F2AD00232D12 /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

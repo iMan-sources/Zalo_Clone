@@ -9,7 +9,7 @@ import UIKit
 
 class SignInViewController: UIViewController {
     // MARK: - Subview
-    private let descriptionView: UIView = GrayDescriptionBarView()
+    private let descriptionView: UIView = GrayDescriptionBarView(content: "Bạn có thể đăng nhập bằng số điện thoại hoặc username")
     
     private let signInView = SignInView()
     

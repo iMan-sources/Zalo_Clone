@@ -23,4 +23,6 @@ enum Image {
     static let xmarkImage = UIImage(systemName: "xmark.circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
     
     static let nextImage = UIImage(systemName: "arrow.right")!.withTintColor(.white, renderingMode: .alwaysOriginal)
+    
+    static let triangleDown = UIImage(systemName: "arrowtriangle.down.fill")!
 }

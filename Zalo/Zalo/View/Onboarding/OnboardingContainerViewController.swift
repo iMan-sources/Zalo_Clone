@@ -28,8 +28,6 @@ class OnboardingContainerViewController: UIViewController {
     // MARK: - Properties
     
     // MARK: - Lifecycle
-    
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll,
                                                        navigationOrientation: .horizontal,
@@ -107,7 +105,7 @@ extension OnboardingContainerViewController {
         
         //zalo img
         NSLayoutConstraint.activate([
-            OnboardingContainerViewController.zaloLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            OnboardingContainerViewController.zaloLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: -4),
             OnboardingContainerViewController.zaloLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             OnboardingContainerViewController.zaloLogo.heightAnchor.constraint(equalToConstant: 72),
             OnboardingContainerViewController.zaloLogo.widthAnchor.constraint(equalToConstant: 72)

@@ -32,7 +32,7 @@ class AuthenTextField: UIView {
     let stackView: UIStackView = {
        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 16
+        stackView.spacing = 10
         stackView.axis = .vertical
         stackView.distribution = .equalCentering
         return stackView
