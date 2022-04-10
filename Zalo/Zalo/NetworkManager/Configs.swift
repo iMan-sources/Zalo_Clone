@@ -9,4 +9,5 @@ import Foundation
 
 struct Configs{
     public static let countryNameBaseUrl = "http://country.io/names.json"
+    public static let countryCodeBaseUrl = "http://country.io/phone.json"
 }

@@ -21,6 +21,7 @@ class CreatePhoneViewController: SignupViewController {
         return stackView
     }()
     // MARK: - Properties
+    var countryViewModel: CountryViewModel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -29,6 +30,8 @@ class CreatePhoneViewController: SignupViewController {
         layout()
         setupDissmissKeyboard()
         setDoneOnKeyboard()
+        
+        bindingViewModel()
     }
     
     // MARK: - Selector
@@ -39,6 +42,17 @@ class CreatePhoneViewController: SignupViewController {
     // MARK: - API
     
     // MARK: - Helper
+    private func bindingViewModel(){
+        countryViewModel = CountryViewModel()
+        countryViewModel.fetchData()
+//        countryViewModel.needReloadTableView = { [weak self] in
+//            guard let self = self else {return}
+//            print("DEBUG: \(self.countryViewModel.names)")
+//            print("DEBUG: \(self.countryViewModel.codes)")
+//        }
+        
+        
+    }
 }
 // MARK: - Extension
 extension CreatePhoneViewController {
