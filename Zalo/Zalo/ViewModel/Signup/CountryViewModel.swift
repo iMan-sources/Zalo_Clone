@@ -46,22 +46,20 @@ class CountryViewModel{
     }
     
     func fetchData(){
-        
-        let group = DispatchGroup()
-        group.enter()
-        fetchCountryNameData()
-        group.leave()
-        
-        group.enter()
-        fetchCountryCodeData()
-        group.leave()
-        
-
-        
-        group.notify(queue: .main) {
-            guard let names = self.names else {return}
-            guard let codes = self.codes else {return}
-            if self.countries.isEmpty{
+        if self.countries.isEmpty{
+            let group = DispatchGroup()
+            group.enter()
+            fetchCountryNameData()
+            group.leave()
+            
+            group.enter()
+            fetchCountryCodeData()
+            group.leave()
+            
+            group.notify(queue: .main) {
+                guard let names = self.names else {return}
+                guard let codes = self.codes else {return}
+                
                 for i in names{
                     let key = i.key, value = i.value
                     let code = codes[key]!.isEmpty ? "N/A" : self.configCodeNumber(code: codes[key])
@@ -72,13 +70,14 @@ class CountryViewModel{
                 let groupedDictionary = Dictionary(grouping: self.countries, by: {String($0.shorthand.prefix(1))})
                 //get key to map the sections
                 let keys = groupedDictionary.keys.sorted()
-    
+                
                 //sort the sections by keys
                 self.sections = keys.map({Section(letter: $0, countries: groupedDictionary[$0]!.sorted(by: {$0.shorthand < $1.shorthand}))})
                 
                 self.needReloadTableView?()
-            }
                 
+                
+            }
         }
 
     }
@@ -107,6 +106,12 @@ class CountryViewModel{
     }
     
     func cellForRowAt(indexPath: IndexPath) -> CountryPhone{
+        let section = sections[indexPath.section]
+        let country = section.countries[indexPath.row]
+        return country
+    }
+    
+    func didSelectRowAt(indexPath: IndexPath) -> CountryPhone {
         let section = sections[indexPath.section]
         let country = section.countries[indexPath.row]
         return country

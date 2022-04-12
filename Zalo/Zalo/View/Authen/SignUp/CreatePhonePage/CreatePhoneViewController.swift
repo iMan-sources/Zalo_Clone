@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class CreatePhoneViewController: SignupViewController {
+class CreatePhoneViewController: SignupViewController{
     // MARK: - Subview
     let grayDescriptionView = GrayDescriptionBarView(content: "Nhập số điện thoại của bạn để tạo tài khoản mới")
     
@@ -38,10 +38,11 @@ class CreatePhoneViewController: SignupViewController {
     
     // MARK: - Selector
     @objc func didCountrySelectionTapped(_: UITapGestureRecognizer){
-        let vc = UINavigationController(rootViewController: CountryCodeViewController(viewModel: countryViewModel))
-        
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        let vc = CountryCodeViewController(viewModel: countryViewModel)
+        vc.delegate = self
+        let nc = UINavigationController(rootViewController: vc)
+        nc.modalPresentationStyle = .fullScreen
+        self.present(nc, animated: true, completion: nil)
     }
     
     // MARK: - API
@@ -107,5 +108,11 @@ extension CreatePhoneViewController {
         countryTextField.addGestureRecognizer(gesture)
     }
     
+}
+
+extension CreatePhoneViewController: CountryCodeViewControllerDelegate {
+    func didCountryCodeTapped(country: CountryPhone) {
+        countryTextField.textfield.text = country.name
+    }
 }
 

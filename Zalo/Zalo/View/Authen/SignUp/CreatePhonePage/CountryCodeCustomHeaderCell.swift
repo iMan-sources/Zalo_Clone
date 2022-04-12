@@ -13,7 +13,7 @@ class CountryCodeCustomHeaderCell: UITableViewHeaderFooterView {
     
     // MARK: - Properties
     static let reuseIdentifier = "CountryCodeCustomHeaderCell"
-    static let rowHeight: CGFloat = 38
+    static let rowHeight: CGFloat = 20
     // MARK: - Lifecycle
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)

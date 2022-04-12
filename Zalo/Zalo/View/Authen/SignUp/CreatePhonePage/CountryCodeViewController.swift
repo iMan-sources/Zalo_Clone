@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol CountryCodeViewControllerDelegate: AnyObject {
+    func didCountryCodeTapped(country: CountryPhone)
+}
 class CountryCodeViewController: SignupViewController {
     // MARK: - Subview
     private let tableView: UITableView = {
@@ -17,6 +19,7 @@ class CountryCodeViewController: SignupViewController {
     
     // MARK: - Properties
     var viewModel: CountryViewModel!
+    weak var delegate: CountryCodeViewControllerDelegate?
     
     // MARK: - Lifecycle
     init(viewModel: CountryViewModel) {
@@ -44,6 +47,14 @@ class CountryCodeViewController: SignupViewController {
     // MARK: - API
     
     // MARK: - Helper
+    
+    override func configureNavBar() {
+        self.navigationController?.navigationBar.barTintColor = .blueZalo
+        self.navigationController?.navigationBar.barStyle = .black
+        self.title = "Chọn mã quốc gia"
+        let leftBarItem = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(backButtonTapped(_:)))
+        self.navigationItem.leftBarButtonItems = [leftBarItem]
+    }
 
     
     private func configTableView(){
@@ -70,13 +81,17 @@ extension CountryCodeViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            
         ])
     }
 }
 
 extension CountryCodeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = viewModel.didSelectRowAt(indexPath: indexPath)
+        delegate?.didCountryCodeTapped(country: country)
+        self.dismiss(animated: true, completion: nil)
+       
+    }
 }
 
 extension CountryCodeViewController: UITableViewDataSource {
