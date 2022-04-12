@@ -13,24 +13,20 @@ class CountryManager {
     func fetchCountryName(url: String, completion: @escaping(Result<Country, BaseError>)->Void){
         guard let url = URL(string: url) else {
             completion(.failure(.urlError))
-            print(0)
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
                 completion(.failure(.requestError))
-                print(1)
                 return
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
                 completion(.failure(.requestError))
-                print(2)
                 return
             }
             
             guard let data = data else {
                 completion(.failure(.parsedDataError))
-                print(3)
                 return
             }
             do{

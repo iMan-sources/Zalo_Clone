@@ -17,6 +17,17 @@ class CountryCodeViewController: SignupViewController {
         return tableView
     }()
     
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Tìm kiếm"
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.isTranslucent = false
+        searchBar.sizeToFit()
+        searchBar.backgroundImage = UIImage()
+        searchBar.searchBarStyle = .default
+        return searchBar
+    }()
+    
     // MARK: - Properties
     var viewModel: CountryViewModel!
     weak var delegate: CountryCodeViewControllerDelegate?
@@ -35,14 +46,18 @@ class CountryCodeViewController: SignupViewController {
         super.viewDidLoad()
         style()
         layout()
-        
+        configViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.updateSearchResult(searchBar: searchBar)
     }
     
     // MARK: - Selector
     override func backButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     // MARK: - API
     
@@ -65,19 +80,38 @@ class CountryCodeViewController: SignupViewController {
         tableView.register(CountryCodeCustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: CountryCodeCustomHeaderCell.reuseIdentifier)
         tableView.tintColor = .darkGray
     }
+    
+    private func configViewModel(){
+        viewModel.needReloadTableView = { [weak self] in
+            guard let self = self else {return}
+            //end loading indicator
+            
+            self.tableView.reloadData()
+        }
+    }
 }
 // MARK: - Extension
 extension CountryCodeViewController {
     
     func style(){
         view.backgroundColor = .systemBackground
+        searchBar.delegate = self
         configTableView()
     }
     func layout(){
         view.addSubview(tableView)
-        
+        view.addSubview(searchBar)
+        //searchBar
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        
+        ])
+        
+        //tableView
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -90,7 +124,6 @@ extension CountryCodeViewController: UITableViewDelegate {
         let country = viewModel.didSelectRowAt(indexPath: indexPath)
         delegate?.didCountryCodeTapped(country: country)
         self.dismiss(animated: true, completion: nil)
-       
     }
 }
 
@@ -112,12 +145,21 @@ extension CountryCodeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: CountryCodeCustomHeaderCell.reuseIdentifier) as! CountryCodeCustomHeaderCell
-        headerCell.bindingData(letter: viewModel.titleForHeaderInSection(section: section)!)
+        headerCell.bindingData(letter: viewModel.titleForHeaderInSection(section: section) ?? "")
         return headerCell
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return viewModel.sectionIndexTitles(for: tableView)
     }
+}
+
+
+extension CountryCodeViewController: UISearchBarDelegate{
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.updateSearchResult(searchBar: searchBar)
+    }
 }

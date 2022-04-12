@@ -51,11 +51,6 @@ class CreatePhoneViewController: SignupViewController{
     private func bindingViewModel(){
         countryViewModel = CountryViewModel()
         countryViewModel.fetchData()
-        countryViewModel.needReloadTableView = { [weak self] in
-            guard let self = self else {return}
-            //end loading indicator
-        }
-        
     }
 
 }

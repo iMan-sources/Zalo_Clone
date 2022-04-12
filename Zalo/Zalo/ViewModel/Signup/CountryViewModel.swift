@@ -18,6 +18,8 @@ class CountryViewModel{
     var codes: Country?
     var countries: [CountryPhone] = [CountryPhone]()
     var sections: [Section] = [Section]()
+    var filteredCountries: [CountryPhone] = [CountryPhone]()
+    var isSearching: Bool = false
     
     
     // MARK: - Function
@@ -79,7 +81,7 @@ class CountryViewModel{
                 
             }
         }
-
+        
     }
     
     //add '+' at first character
@@ -92,34 +94,56 @@ class CountryViewModel{
         codeChars.insert("+", at: 0)
         return String(codeChars)
     }
-        
+    // MARK: - Helper TableView
     func numberOfRowsInSection(section: Int) -> Int {
-        return sections[section].countries.count
+        return isSearching ? filteredCountries.count : sections[section].countries.count
     }
     
     func numberOfSections(in tableView: UITableView)->Int{
-        return sections.count
+        return isSearching ? 1 : sections.count
     }
     
     func titleForHeaderInSection(section: Int) -> String?{
-        return sections[section].letter
+        return isSearching ? nil : sections[section].letter
     }
     
     func cellForRowAt(indexPath: IndexPath) -> CountryPhone{
-        let section = sections[indexPath.section]
-        let country = section.countries[indexPath.row]
+        if !isSearching {
+            let section = sections[indexPath.section]
+            let country = section.countries[indexPath.row]
+            return country
+        }
+        let country = filteredCountries[indexPath.row]
         return country
     }
     
     func didSelectRowAt(indexPath: IndexPath) -> CountryPhone {
-        let section = sections[indexPath.section]
-        let country = section.countries[indexPath.row]
+        if !isSearching {
+            let section = sections[indexPath.section]
+            let country = section.countries[indexPath.row]
+            return country
+        }
+        let country = filteredCountries[indexPath.row]
         return country
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return sections.map{$0.letter}
+        return isSearching ? nil : sections.map{$0.letter}
+    }
+    
+    // MARK: - SearchBar Helper
+    func updateSearchResult(searchBar: UISearchBar){
+        guard let filter = searchBar.text, !filter.isEmpty else {
+            filteredCountries.removeAll()
+            isSearching = false
+            self.needReloadTableView?()
+            return
+        }
+        
+        isSearching = true
+        filteredCountries = countries.filter({$0.shorthand.lowercased().contains(filter.lowercased())})
+        self.needReloadTableView?()
     }
 }
-    
+
 
