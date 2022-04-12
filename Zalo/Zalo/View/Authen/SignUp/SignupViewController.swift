@@ -18,9 +18,7 @@ class SignupViewController: UIViewController, FooterViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        footerView.delegate = self
-        toolbarView.delegate = self
-        setupFooterView()
+
         configureNavBar()
     }
 
@@ -48,6 +46,12 @@ class SignupViewController: UIViewController, FooterViewDelegate {
             footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
             
         ])
+    }
+    
+    func configFooterAndToolBar(){
+        footerView.delegate = self
+        toolbarView.delegate = self
+        setupFooterView()
     }
     
     func configureNavBar(){

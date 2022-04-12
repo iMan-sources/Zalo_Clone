@@ -27,6 +27,7 @@ class CreateAccountViewController: SignupViewController {
         setupDissmissKeyboard()
         setupNameTextFieldCriteria()
         setDoneOnKeyboard()
+        configFooterAndToolBar()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

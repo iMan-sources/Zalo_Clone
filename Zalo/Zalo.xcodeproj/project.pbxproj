@@ -42,6 +42,9 @@
 		0FF726B12802F3AC00232D12 /* CountryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726B02802F3AC00232D12 /* CountryAPI.swift */; };
 		0FF726B32802F62500232D12 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726B22802F62500232D12 /* CountryViewModel.swift */; };
 		0FF726B728030D8400232D12 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726B628030D8400232D12 /* Country.swift */; };
+		0FF726CC2803DABE00232D12 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CB2803DABE00232D12 /* CountryCodeViewController.swift */; };
+		0FF726CE280438B300232D12 /* CountryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CD280438B300232D12 /* CountryCodeTableViewCell.swift */; };
+		0FF726D028056F2100232D12 /* CountryCodeCustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CF28056F2100232D12 /* CountryCodeCustomHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		0FF726B02802F3AC00232D12 /* CountryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPI.swift; sourceTree = "<group>"; };
 		0FF726B22802F62500232D12 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		0FF726B628030D8400232D12 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		0FF726CB2803DABE00232D12 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
+		0FF726CD280438B300232D12 /* CountryCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeTableViewCell.swift; sourceTree = "<group>"; };
+		0FF726CF28056F2100232D12 /* CountryCodeCustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeCustomHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +329,9 @@
 			isa = PBXGroup;
 			children = (
 				0FF726942801BE8B00232D12 /* CreatePhoneViewController.swift */,
+				0FF726CB2803DABE00232D12 /* CountryCodeViewController.swift */,
+				0FF726CD280438B300232D12 /* CountryCodeTableViewCell.swift */,
+				0FF726CF28056F2100232D12 /* CountryCodeCustomHeaderCell.swift */,
 			);
 			path = CreatePhonePage;
 			sourceTree = "<group>";
@@ -490,6 +499,8 @@
 				0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */,
 				0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */,
 				0FF7266927FEA5E800232D12 /* CreateAccountViewController.swift in Sources */,
+				0FF726D028056F2100232D12 /* CountryCodeCustomHeaderCell.swift in Sources */,
+				0FF726CC2803DABE00232D12 /* CountryCodeViewController.swift in Sources */,
 				0FF726B12802F3AC00232D12 /* CountryAPI.swift in Sources */,
 				0FF726B32802F62500232D12 /* CountryViewModel.swift in Sources */,
 				0FF726AD2802F27600232D12 /* Configs.swift in Sources */,
@@ -509,6 +520,7 @@
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
 				0FF726AB28028D9000232D12 /* CountryManager.swift in Sources */,
 				0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */,
+				0FF726CE280438B300232D12 /* CountryCodeTableViewCell.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
 				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
 				0FF726B728030D8400232D12 /* Country.swift in Sources */,

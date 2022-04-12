@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class CreatePhoneViewController: SignupViewController {
     // MARK: - Subview
     let grayDescriptionView = GrayDescriptionBarView(content: "Nhập số điện thoại của bạn để tạo tài khoản mới")
@@ -23,6 +22,8 @@ class CreatePhoneViewController: SignupViewController {
     // MARK: - Properties
     var countryViewModel: CountryViewModel!
     
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +31,17 @@ class CreatePhoneViewController: SignupViewController {
         layout()
         setupDissmissKeyboard()
         setDoneOnKeyboard()
-        
+        configFooterAndToolBar()
         bindingViewModel()
+
     }
     
     // MARK: - Selector
     @objc func didCountrySelectionTapped(_: UITapGestureRecognizer){
-        print("DEBUG: didCountrySelectionTapped..")
+        let vc = UINavigationController(rootViewController: CountryCodeViewController(viewModel: countryViewModel))
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     // MARK: - API
@@ -45,14 +50,13 @@ class CreatePhoneViewController: SignupViewController {
     private func bindingViewModel(){
         countryViewModel = CountryViewModel()
         countryViewModel.fetchData()
-//        countryViewModel.needReloadTableView = { [weak self] in
-//            guard let self = self else {return}
-//            print("DEBUG: \(self.countryViewModel.names)")
-//            print("DEBUG: \(self.countryViewModel.codes)")
-//        }
-        
+        countryViewModel.needReloadTableView = { [weak self] in
+            guard let self = self else {return}
+            //end loading indicator
+        }
         
     }
+
 }
 // MARK: - Extension
 extension CreatePhoneViewController {
@@ -60,6 +64,7 @@ extension CreatePhoneViewController {
     func style(){
         textField = NameTextField(placeholder: "Số điện thoại")
         configCountryTextField()
+        
     }
     func layout(){
         view.addSubview(grayDescriptionView)
@@ -103,3 +108,4 @@ extension CreatePhoneViewController {
     }
     
 }
+
