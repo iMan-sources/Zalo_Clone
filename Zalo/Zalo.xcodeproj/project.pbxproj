@@ -136,6 +136,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4DF97728067BD7008EE325 /* CreatePasswordPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreatePasswordPage;
+			sourceTree = "<group>";
+		};
 		0FF7255127F9964400232D12 = {
 			isa = PBXGroup;
 			children = (

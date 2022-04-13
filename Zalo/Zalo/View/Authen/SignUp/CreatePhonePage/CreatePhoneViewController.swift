@@ -161,9 +161,6 @@ extension CreatePhoneViewController: AuthenTextFieldDelgate {
             
             isCriteriaValid = AuthenCriteria.isNumberAndLength(text)
         }
-        
-        
-
     }
     
 }
