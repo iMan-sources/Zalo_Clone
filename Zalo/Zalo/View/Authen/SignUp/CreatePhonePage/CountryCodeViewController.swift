@@ -42,6 +42,7 @@ class CountryCodeViewController: SignupViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -85,7 +86,6 @@ class CountryCodeViewController: SignupViewController {
         viewModel.needReloadTableView = { [weak self] in
             guard let self = self else {return}
             //end loading indicator
-            
             self.tableView.reloadData()
         }
     }
@@ -157,6 +157,7 @@ extension CountryCodeViewController: UITableViewDataSource {
 
 extension CountryCodeViewController: UISearchBarDelegate{
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

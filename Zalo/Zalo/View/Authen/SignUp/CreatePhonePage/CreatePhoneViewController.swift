@@ -19,10 +19,14 @@ class CreatePhoneViewController: SignupViewController{
         stackView.spacing = 12
         return stackView
     }()
+    
+    private let errorLabel: UILabel = CustomLabel(content: "Số điện thoại không hợp lệ", color: .systemRed, alignment: .left, fontFamily: UIFont.preferredFont(forTextStyle: .body))
     // MARK: - Properties
     var countryViewModel: CountryViewModel!
     
+    var errorLabelHeightAnchor: NSLayoutConstraint!
     
+    var isCriteriaValid: Bool = false
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -52,6 +56,24 @@ class CreatePhoneViewController: SignupViewController{
         countryViewModel = CountryViewModel()
         countryViewModel.fetchData()
     }
+    private func configNextButton(){
+        footerView.nextButton.backgroundColor = isCriteriaValid ? .blueZalo : .lightBlueGrayZalo
+        footerView.nextButton.isUserInteractionEnabled = isCriteriaValid ? true : false
+        toolbarView.nextButton.backgroundColor = footerView.nextButton.backgroundColor
+        toolbarView.nextButton.isUserInteractionEnabled = footerView.nextButton.isUserInteractionEnabled
+    }
+    
+    private func animateErrorLabel(){
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseOut, animations: {
+            self.errorLabelHeightAnchor.constant = self.isCriteriaValid ? 0 : 22
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    override func didNextButtonTapped() {
+        
+        print("DEBUG: next button tapped...in phone view")
+    }
 
 }
 // MARK: - Extension
@@ -60,11 +82,14 @@ extension CreatePhoneViewController {
     func style(){
         textField = NameTextField(placeholder: "Số điện thoại")
         configCountryTextField()
+        textField.delegate = self
+        textField.textfield.keyboardType = .numberPad
         
     }
     func layout(){
         view.addSubview(grayDescriptionView)
         view.addSubview(textFieldStackView)
+        view.addSubview(errorLabel)
         
         textFieldStackView.addArrangedSubview(countryTextField)
         textFieldStackView.addArrangedSubview(textField)
@@ -83,6 +108,15 @@ extension CreatePhoneViewController {
             textFieldStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: textFieldStackView.trailingAnchor, multiplier: 2)
         
+        ])
+        errorLabelHeightAnchor = errorLabel.heightAnchor.constraint(equalToConstant: 0)
+        //error label
+        NSLayoutConstraint.activate([
+            errorLabel.topAnchor.constraint(equalToSystemSpacingBelow: textFieldStackView.bottomAnchor, multiplier: 1),
+            errorLabel.leadingAnchor.constraint(equalTo: textFieldStackView.leadingAnchor),
+            errorLabel.trailingAnchor.constraint(equalTo: textFieldStackView.trailingAnchor),
+            errorLabelHeightAnchor
+            
         ])
     }
     
@@ -109,5 +143,28 @@ extension CreatePhoneViewController: CountryCodeViewControllerDelegate {
     func didCountryCodeTapped(country: CountryPhone) {
         countryTextField.textfield.text = country.name
     }
+}
+
+extension CreatePhoneViewController: AuthenTextFieldDelgate {
+    func didTextFieldEndEditing(_ sender: AuthenTextField) {
+        //enable background & userInteract
+        animateErrorLabel()
+        configNextButton()
+
+    }
+    
+    func didTextFieldChanged(_ sender: AuthenTextField) {
+        //enable background & userInteract
+        if let text = sender.textfield.text {
+            toolbarView.nextButton.backgroundColor =  !text.isEmpty ? .blueZalo : .lightBlueGrayZalo
+            toolbarView.nextButton.isUserInteractionEnabled = !text.isEmpty ? true : false
+            
+            isCriteriaValid = AuthenCriteria.isNumberAndLength(text)
+        }
+        
+        
+
+    }
+    
 }
 

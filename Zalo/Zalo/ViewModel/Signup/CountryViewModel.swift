@@ -77,8 +77,6 @@ class CountryViewModel{
                 self.sections = keys.map({Section(letter: $0, countries: groupedDictionary[$0]!.sorted(by: {$0.shorthand < $1.shorthand}))})
                 
                 self.needReloadTableView?()
-                
-                
             }
         }
         

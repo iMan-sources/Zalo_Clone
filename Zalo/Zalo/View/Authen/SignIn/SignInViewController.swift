@@ -23,7 +23,6 @@ class SignInViewController: UIViewController {
         return button
     }()
     
-
     private lazy var signInButton = CustomButton(text: "Đăng nhập", textColor: .white, backgroundColor: .blueThirdZalo, font: UIFont.preferredFont(forTextStyle: .headline))
     // MARK: - Properties
     typealias customValidation = SignInView.textfieldValidation
@@ -47,7 +46,6 @@ class SignInViewController: UIViewController {
     
     @objc func forgetBtnTapped(_ button: UIButton){
         print("DEBUG: forget Btn tapped")
-        
     }
     
     @objc func signInBtnTapped(_ button: UIButton){
@@ -80,9 +78,8 @@ extension SignInViewController {
         signInButton.isUserInteractionEnabled = false
     }
     func layout(){
+        
         view.addSubview(descriptionView)
-        
-        
         view.addSubview(signInView)
         view.addSubview(forgetPasswordBtn)
         view.addSubview(signInButton)
@@ -113,17 +110,13 @@ extension SignInViewController {
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: forgetPasswordBtn.bottomAnchor, multiplier: 2),
             signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 8),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: signInButton.trailingAnchor, multiplier: 8)
-        
         ])
-        
-
     }
 }
 
 extension SignInViewController: SignInViewDelegate {
     func enableSignInButtonInteract() {
         signInButton.backgroundColor = signInView.userTextFieldAndPasswordTextFieldIsCompleted() ? .blueZalo : .blueThirdZalo
-//        print(signInView.userTextFieldAndPasswordTextFieldIsCompleted())
         signInButton.isUserInteractionEnabled = signInView.userTextFieldAndPasswordTextFieldIsCompleted() ? true : false
     }
     
