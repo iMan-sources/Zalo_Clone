@@ -13,10 +13,10 @@ class NameTextField: AuthenTextField {
     // MARK: - Subview
     typealias CustomValidation = (_ text: String?) -> (Bool, String)?
     // MARK: - Properties
-    var text: String?{
-        get{return textfield.text}
-        set{textfield.text = newValue}
-    }
+//    var text: String?{
+//        get{return textfield.text}
+//        set{textfield.text = newValue}
+//    }
     
     var customValidation: CustomValidation?
     

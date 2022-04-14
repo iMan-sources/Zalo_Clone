@@ -37,7 +37,15 @@ class CreatePhoneViewController: SignupViewController{
         setDoneOnKeyboard()
         configFooterAndToolBar()
         bindingViewModel()
-
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //save phoneNumber newUser
+        guard let phoneNumber = textField.text, let code = countryTextField.text else {return}
+        
+        CreateAccountViewController.user.setPhoneNumber(number: phoneNumber)
+        CreateAccountViewController.user.setCountryCode(code: code)
     }
     
     // MARK: - Selector
@@ -71,8 +79,14 @@ class CreatePhoneViewController: SignupViewController{
     }
     
     override func didNextButtonTapped() {
+        if isCriteriaValid {
+            animateErrorLabel()
+            let vc = CreatePasswordViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            animateErrorLabel()
+        }
         
-        print("DEBUG: next button tapped...in phone view")
     }
 
 }

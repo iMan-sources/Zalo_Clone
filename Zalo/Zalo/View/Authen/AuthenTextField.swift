@@ -43,6 +43,11 @@ class AuthenTextField: UIView {
     var dividerHeightAnchor: NSLayoutConstraint!
     weak var delegate: AuthenTextFieldDelgate?
     
+    var text: String?{
+        get{return textfield.text}
+        set{textfield.text = newValue}
+    }
+    
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4DF97928067D8C008EE325 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF97828067D8C008EE325 /* CreatePasswordViewController.swift */; };
+		0F4DF9A1280812E4008EE325 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9A0280812E4008EE325 /* User.swift */; };
 		0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255D27F9964400232D12 /* AppDelegate.swift */; };
 		0FF7256027F9964400232D12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255F27F9964400232D12 /* SceneDelegate.swift */; };
 		0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7256127F9964400232D12 /* OnboardingContainerViewController.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4DF97828067D8C008EE325 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		0F4DF9A0280812E4008EE325 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0FF7255A27F9964400232D12 /* Zalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7255D27F9964400232D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF7255F27F9964400232D12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		0F4DF97728067BD7008EE325 /* CreatePasswordPage */ = {
 			isa = PBXGroup;
 			children = (
+				0F4DF97828067D8C008EE325 /* CreatePasswordViewController.swift */,
 			);
 			path = CreatePasswordPage;
 			sourceTree = "<group>";
@@ -220,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF726B528030D6000232D12 /* API */,
-				0FF726B628030D8400232D12 /* Country.swift */,
+				0F4DF9A0280812E4008EE325 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 		0FF7266727FEA55500232D12 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				0F4DF97728067BD7008EE325 /* CreatePasswordPage */,
 				0FF726932801BE6A00232D12 /* CreatePhonePage */,
 				0FF7267427FFDF1B00232D12 /* CreateNamePage */,
 				0FF7267227FFDF1300232D12 /* FooterView.swift */,
@@ -365,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF726B02802F3AC00232D12 /* CountryAPI.swift */,
+				0FF726B628030D8400232D12 /* Country.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -529,6 +536,8 @@
 				0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */,
 				0FF726CE280438B300232D12 /* CountryCodeTableViewCell.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
+				0F4DF97928067D8C008EE325 /* CreatePasswordViewController.swift in Sources */,
+				0F4DF9A1280812E4008EE325 /* User.swift in Sources */,
 				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
 				0FF726B728030D8400232D12 /* Country.swift in Sources */,
 				0FF726AF2802F2AD00232D12 /* BaseError.swift in Sources */,
