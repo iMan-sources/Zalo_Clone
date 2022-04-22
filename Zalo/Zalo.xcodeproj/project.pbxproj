@@ -3,12 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A6ED9BEEFCD0F1C71D39F4 /* Pods_Zalo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520AB3F4E20D329D21083317 /* Pods_Zalo.framework */; };
 		0F4DF97928067D8C008EE325 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF97828067D8C008EE325 /* CreatePasswordViewController.swift */; };
 		0F4DF9A1280812E4008EE325 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9A0280812E4008EE325 /* User.swift */; };
+		0F4DF9A528086F4C008EE325 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9A428086F4C008EE325 /* HomeViewController.swift */; };
+		0F4DF9A828086FC0008EE325 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9A728086FC0008EE325 /* PersonalViewController.swift */; };
+		0F4DF9AB28087039008EE325 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9AA28087039008EE325 /* ContactViewController.swift */; };
+		0F4DF9AE28087090008EE325 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DF9AD28087090008EE325 /* MainTabBarController.swift */; };
+		0F53A19328090F3E00C174BC /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A19228090F3E00C174BC /* HomeTableCell.swift */; };
+		0F53A195280916AC00C174BC /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A194280916AC00C174BC /* UITableView+Utils.swift */; };
+		0FBCE005280DA9890032D61B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE004280DA9890032D61B /* UserManager.swift */; };
+		0FBCE008280DAE3E0032D61B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE007280DAE3E0032D61B /* HomeViewModel.swift */; };
+		0FBCE00B280E505C0032D61B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE00A280E505C0032D61B /* ConversationViewController.swift */; };
+		0FBCE00D280E5B960032D61B /* MessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE00C280E5B960032D61B /* MessagingView.swift */; };
+		0FBCE00F280F97460032D61B /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE00E280F97460032D61B /* UIView+Utils.swift */; };
+		0FBCE011280FA51A0032D61B /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE010280FA51A0032D61B /* UIResponder+Utils.swift */; };
+		0FBCE013281049020032D61B /* MessageCellSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE012281049020032D61B /* MessageCellSender.swift */; };
+		0FBCE01628105E1C0032D61B /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE01528105E1C0032D61B /* ConversationViewModel.swift */; };
+		0FBCE019281102610032D61B /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE018281102610032D61B /* SocketIOManager.swift */; };
+		0FBCE01B28111C6D0032D61B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE01A28111C6D0032D61B /* Message.swift */; };
+		0FBCE01D2811766D0032D61B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE01C2811766D0032D61B /* Friend.swift */; };
+		0FBCE01F2811A0860032D61B /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE01E2811A0860032D61B /* TestVC.swift */; };
+		0FBCE0212812A83B0032D61B /* MessageCellReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCE0202812A83B0032D61B /* MessageCellReceiver.swift */; };
 		0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255D27F9964400232D12 /* AppDelegate.swift */; };
 		0FF7256027F9964400232D12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7255F27F9964400232D12 /* SceneDelegate.swift */; };
 		0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7256127F9964400232D12 /* OnboardingContainerViewController.swift */; };
@@ -47,6 +67,8 @@
 		0FF726CC2803DABE00232D12 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CB2803DABE00232D12 /* CountryCodeViewController.swift */; };
 		0FF726CE280438B300232D12 /* CountryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CD280438B300232D12 /* CountryCodeTableViewCell.swift */; };
 		0FF726D028056F2100232D12 /* CountryCodeCustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726CF28056F2100232D12 /* CountryCodeCustomHeaderCell.swift */; };
+		2CEF7B8C6BD648B089224AE9 /* Pods_Zalo_ZaloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1AB3AEAFF04359736AD641 /* Pods_Zalo_ZaloUITests.framework */; };
+		37AFDB2DDC57760C5B20626B /* Pods_ZaloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BBF4CC857133D0E950C508 /* Pods_ZaloTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +91,25 @@
 /* Begin PBXFileReference section */
 		0F4DF97828067D8C008EE325 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		0F4DF9A0280812E4008EE325 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F4DF9A428086F4C008EE325 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F4DF9A728086FC0008EE325 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		0F4DF9AA28087039008EE325 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		0F4DF9AD28087090008EE325 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		0F53A19228090F3E00C174BC /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		0F53A194280916AC00C174BC /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		0FBCE004280DA9890032D61B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		0FBCE007280DAE3E0032D61B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0FBCE00A280E505C0032D61B /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		0FBCE00C280E5B960032D61B /* MessagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingView.swift; sourceTree = "<group>"; };
+		0FBCE00E280F97460032D61B /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		0FBCE010280FA51A0032D61B /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		0FBCE012281049020032D61B /* MessageCellSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellSender.swift; sourceTree = "<group>"; };
+		0FBCE01528105E1C0032D61B /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		0FBCE018281102610032D61B /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		0FBCE01A28111C6D0032D61B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0FBCE01C2811766D0032D61B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		0FBCE01E2811A0860032D61B /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		0FBCE0202812A83B0032D61B /* MessageCellReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellReceiver.swift; sourceTree = "<group>"; };
 		0FF7255A27F9964400232D12 /* Zalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7255D27F9964400232D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF7255F27F9964400232D12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +154,15 @@
 		0FF726CB2803DABE00232D12 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
 		0FF726CD280438B300232D12 /* CountryCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeTableViewCell.swift; sourceTree = "<group>"; };
 		0FF726CF28056F2100232D12 /* CountryCodeCustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeCustomHeaderCell.swift; sourceTree = "<group>"; };
+		328C856E7F40379706AF9E3F /* Pods-ZaloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloTests.debug.xcconfig"; path = "Target Support Files/Pods-ZaloTests/Pods-ZaloTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E1AB3AEAFF04359736AD641 /* Pods_Zalo_ZaloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zalo_ZaloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF92C480D3FDBC4DC688A7 /* Pods-ZaloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloTests.release.xcconfig"; path = "Target Support Files/Pods-ZaloTests/Pods-ZaloTests.release.xcconfig"; sourceTree = "<group>"; };
+		520AB3F4E20D329D21083317 /* Pods_Zalo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zalo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BBF4CC857133D0E950C508 /* Pods_ZaloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3C07F102E5807A3CE4756BB /* Pods-Zalo-ZaloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalo-ZaloUITests.release.xcconfig"; path = "Target Support Files/Pods-Zalo-ZaloUITests/Pods-Zalo-ZaloUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E94A3A734A522396342341C1 /* Pods-Zalo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalo.debug.xcconfig"; path = "Target Support Files/Pods-Zalo/Pods-Zalo.debug.xcconfig"; sourceTree = "<group>"; };
+		E9BD251254E904977665C3B3 /* Pods-Zalo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalo.release.xcconfig"; path = "Target Support Files/Pods-Zalo/Pods-Zalo.release.xcconfig"; sourceTree = "<group>"; };
+		F0993D6775AF2EC6B8DA6B2E /* Pods-Zalo-ZaloUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalo-ZaloUITests.debug.xcconfig"; path = "Target Support Files/Pods-Zalo-ZaloUITests/Pods-Zalo-ZaloUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A6ED9BEEFCD0F1C71D39F4 /* Pods_Zalo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AFDB2DDC57760C5B20626B /* Pods_ZaloTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEF7B8C6BD648B089224AE9 /* Pods_Zalo_ZaloUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +201,74 @@
 			path = CreatePasswordPage;
 			sourceTree = "<group>";
 		};
+		0F4DF9A328086F1C008EE325 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DF9A428086F4C008EE325 /* HomeViewController.swift */,
+				0F53A19228090F3E00C174BC /* HomeTableCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0F4DF9A628086FA4008EE325 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DF9A728086FC0008EE325 /* PersonalViewController.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		0F4DF9A92808701E008EE325 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DF9AA28087039008EE325 /* ContactViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		0F4DF9AC2808707E008EE325 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DF9AD28087090008EE325 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0FBCE006280DAE2D0032D61B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCE007280DAE3E0032D61B /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0FBCE009280E50480032D61B /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCE00A280E505C0032D61B /* ConversationViewController.swift */,
+				0FBCE00C280E5B960032D61B /* MessagingView.swift */,
+				0FBCE012281049020032D61B /* MessageCellSender.swift */,
+				0FBCE01E2811A0860032D61B /* TestVC.swift */,
+				0FBCE0202812A83B0032D61B /* MessageCellReceiver.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		0FBCE01428105E0B0032D61B /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCE01528105E1C0032D61B /* ConversationViewModel.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		0FBCE017281100910032D61B /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
 		0FF7255127F9964400232D12 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +276,8 @@
 				0FF7257327F9964600232D12 /* ZaloTests */,
 				0FF7257E27F9964600232D12 /* ZaloUITests */,
 				0FF7255B27F9964400232D12 /* Products */,
+				77748158A494C355D42E8C50 /* Pods */,
+				58C44410148AB74EB2B256E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +294,7 @@
 		0FF7255C27F9964400232D12 /* Zalo */ = {
 			isa = PBXGroup;
 			children = (
+				0FBCE017281100910032D61B /* Backend */,
 				0FF726A928028D5A00232D12 /* NetworkManager */,
 				0FF7259727F9A37C00232D12 /* CustomUI */,
 				0FF7259027F996C300232D12 /* Utils */,
@@ -207,6 +331,8 @@
 		0FF7258D27F996B100232D12 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0FBCE01428105E0B0032D61B /* Conversation */,
+				0FBCE006280DAE2D0032D61B /* Home */,
 				0FF726B42802F62C00232D12 /* Signup */,
 			);
 			path = ViewModel;
@@ -215,6 +341,11 @@
 		0FF7258E27F996BB00232D12 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FBCE009280E50480032D61B /* Conversation */,
+				0F4DF9AC2808707E008EE325 /* TabBar */,
+				0F4DF9A92808701E008EE325 /* Contact */,
+				0F4DF9A628086FA4008EE325 /* Personal */,
+				0F4DF9A328086F1C008EE325 /* Home */,
 				0FF725DF27FC387700232D12 /* Authen */,
 				0FF7259127F9988900232D12 /* Onboarding */,
 			);
@@ -226,6 +357,8 @@
 			children = (
 				0FF726B528030D6000232D12 /* API */,
 				0F4DF9A0280812E4008EE325 /* User.swift */,
+				0FBCE01A28111C6D0032D61B /* Message.swift */,
+				0FBCE01C2811766D0032D61B /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +370,9 @@
 				0FF725D427FBE17000232D12 /* UIColor+Utils.swift */,
 				0FF7265D27FD398900232D12 /* UIViewController+Utils.swift */,
 				0FF7265F27FD3B2900232D12 /* UITextField+Utils.swift */,
+				0F53A194280916AC00C174BC /* UITableView+Utils.swift */,
+				0FBCE00E280F97460032D61B /* UIView+Utils.swift */,
+				0FBCE010280FA51A0032D61B /* UIResponder+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -355,6 +491,8 @@
 				0FF726AA28028D9000232D12 /* CountryManager.swift */,
 				0FF726AC2802F27600232D12 /* Configs.swift */,
 				0FF726AE2802F2AD00232D12 /* BaseError.swift */,
+				0FBCE004280DA9890032D61B /* UserManager.swift */,
+				0FBCE018281102610032D61B /* SocketIOManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -376,6 +514,29 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		58C44410148AB74EB2B256E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				520AB3F4E20D329D21083317 /* Pods_Zalo.framework */,
+				3E1AB3AEAFF04359736AD641 /* Pods_Zalo_ZaloUITests.framework */,
+				A5BBF4CC857133D0E950C508 /* Pods_ZaloTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77748158A494C355D42E8C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E94A3A734A522396342341C1 /* Pods-Zalo.debug.xcconfig */,
+				E9BD251254E904977665C3B3 /* Pods-Zalo.release.xcconfig */,
+				F0993D6775AF2EC6B8DA6B2E /* Pods-Zalo-ZaloUITests.debug.xcconfig */,
+				E3C07F102E5807A3CE4756BB /* Pods-Zalo-ZaloUITests.release.xcconfig */,
+				328C856E7F40379706AF9E3F /* Pods-ZaloTests.debug.xcconfig */,
+				4BCF92C480D3FDBC4DC688A7 /* Pods-ZaloTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,9 +544,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF7258427F9964600232D12 /* Build configuration list for PBXNativeTarget "Zalo" */;
 			buildPhases = (
+				2C97E5B02C21BD939D494923 /* [CP] Check Pods Manifest.lock */,
 				0FF7255627F9964400232D12 /* Sources */,
 				0FF7255727F9964400232D12 /* Frameworks */,
 				0FF7255827F9964400232D12 /* Resources */,
+				70672B625C7567E1E4C6A356 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +563,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF7258727F9964600232D12 /* Build configuration list for PBXNativeTarget "ZaloTests" */;
 			buildPhases = (
+				2E939AE27E75A221C83D3A74 /* [CP] Check Pods Manifest.lock */,
 				0FF7256C27F9964600232D12 /* Sources */,
 				0FF7256D27F9964600232D12 /* Frameworks */,
 				0FF7256E27F9964600232D12 /* Resources */,
@@ -418,9 +582,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF7258A27F9964600232D12 /* Build configuration list for PBXNativeTarget "ZaloUITests" */;
 			buildPhases = (
+				3AB01521E26FC578C7340011 /* [CP] Check Pods Manifest.lock */,
 				0FF7257727F9964600232D12 /* Sources */,
 				0FF7257827F9964600232D12 /* Frameworks */,
 				0FF7257927F9964600232D12 /* Resources */,
+				5A201C7FC60915EB84587879 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,6 +666,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C97E5B02C21BD939D494923 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zalo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E939AE27E75A221C83D3A74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZaloTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AB01521E26FC578C7340011 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zalo-ZaloUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A201C7FC60915EB84587879 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalo-ZaloUITests/Pods-Zalo-ZaloUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalo-ZaloUITests/Pods-Zalo-ZaloUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zalo-ZaloUITests/Pods-Zalo-ZaloUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70672B625C7567E1E4C6A356 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalo/Pods-Zalo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalo/Pods-Zalo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zalo/Pods-Zalo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FF7255627F9964400232D12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -507,12 +776,21 @@
 			files = (
 				0FF725E127FC388800232D12 /* SignInViewController.swift in Sources */,
 				0FF7259527F99AF000232D12 /* Constants.swift in Sources */,
+				0F4DF9AE28087090008EE325 /* MainTabBarController.swift in Sources */,
+				0F4DF9AB28087039008EE325 /* ContactViewController.swift in Sources */,
 				0FF7265E27FD398900232D12 /* UIViewController+Utils.swift in Sources */,
+				0FBCE01628105E1C0032D61B /* ConversationViewModel.swift in Sources */,
+				0F4DF9A528086F4C008EE325 /* HomeViewController.swift in Sources */,
 				0FF7259A27F9A39300232D12 /* CustomLabel.swift in Sources */,
+				0FBCE00D280E5B960032D61B /* MessagingView.swift in Sources */,
 				0FF725DA27FBFCE900232D12 /* CustomButton.swift in Sources */,
+				0F4DF9A828086FC0008EE325 /* PersonalViewController.swift in Sources */,
 				0FF7256227F9964400232D12 /* OnboardingContainerViewController.swift in Sources */,
 				0FF7267127FFCFDF00232D12 /* NameTextField.swift in Sources */,
+				0F53A195280916AC00C174BC /* UITableView+Utils.swift in Sources */,
 				0FF7266927FEA5E800232D12 /* CreateAccountViewController.swift in Sources */,
+				0FBCE01D2811766D0032D61B /* Friend.swift in Sources */,
+				0FBCE01F2811A0860032D61B /* TestVC.swift in Sources */,
 				0FF726D028056F2100232D12 /* CountryCodeCustomHeaderCell.swift in Sources */,
 				0FF726CC2803DABE00232D12 /* CountryCodeViewController.swift in Sources */,
 				0FF726B12802F3AC00232D12 /* CountryAPI.swift in Sources */,
@@ -523,19 +801,29 @@
 				0FF7255E27F9964400232D12 /* AppDelegate.swift in Sources */,
 				0FF725D727FBF05C00232D12 /* MainOnboardingViewController.swift in Sources */,
 				0FF7256027F9964400232D12 /* SceneDelegate.swift in Sources */,
+				0FBCE008280DAE3E0032D61B /* HomeViewModel.swift in Sources */,
 				0FF7266D27FFCC2F00232D12 /* NameCriteriaView.swift in Sources */,
 				0FF7266027FD3B2900232D12 /* UITextField+Utils.swift in Sources */,
 				0FF7259327F998A800232D12 /* OnboardingViewController.swift in Sources */,
+				0FBCE00F280F97460032D61B /* UIView+Utils.swift in Sources */,
 				0FF7265927FD2FDA00232D12 /* AuthenTextField.swift in Sources */,
+				0FBCE011280FA51A0032D61B /* UIResponder+Utils.swift in Sources */,
 				0FF7266F27FFCDFF00232D12 /* NameCriteriaStatusView.swift in Sources */,
 				0FF726922801B66B00232D12 /* SignupViewController.swift in Sources */,
+				0FBCE005280DA9890032D61B /* UserManager.swift in Sources */,
 				0FF725D527FBE17000232D12 /* UIColor+Utils.swift in Sources */,
 				0FF7265B27FD30E000232D12 /* SignInView.swift in Sources */,
 				0FF7266B27FFCB1A00232D12 /* NameCriteria.swift in Sources */,
+				0FBCE019281102610032D61B /* SocketIOManager.swift in Sources */,
 				0FF726AB28028D9000232D12 /* CountryManager.swift in Sources */,
+				0F53A19328090F3E00C174BC /* HomeTableCell.swift in Sources */,
+				0FBCE01B28111C6D0032D61B /* Message.swift in Sources */,
 				0FF726952801BE8B00232D12 /* CreatePhoneViewController.swift in Sources */,
 				0FF726CE280438B300232D12 /* CountryCodeTableViewCell.swift in Sources */,
+				0FBCE013281049020032D61B /* MessageCellSender.swift in Sources */,
+				0FBCE00B280E505C0032D61B /* ConversationViewController.swift in Sources */,
 				0FF7266527FEA2FA00232D12 /* GrayDescriptionBarView.swift in Sources */,
+				0FBCE0212812A83B0032D61B /* MessageCellReceiver.swift in Sources */,
 				0F4DF97928067D8C008EE325 /* CreatePasswordViewController.swift in Sources */,
 				0F4DF9A1280812E4008EE325 /* User.swift in Sources */,
 				0FF7267327FFDF1300232D12 /* FooterView.swift in Sources */,
@@ -705,6 +993,7 @@
 		};
 		0FF7258527F9964600232D12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94A3A734A522396342341C1 /* Pods-Zalo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -724,6 +1013,7 @@
 		};
 		0FF7258627F9964600232D12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BD251254E904977665C3B3 /* Pods-Zalo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -743,6 +1033,7 @@
 		};
 		0FF7258827F9964600232D12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 328C856E7F40379706AF9E3F /* Pods-ZaloTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -765,6 +1056,7 @@
 		};
 		0FF7258927F9964600232D12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCF92C480D3FDBC4DC688A7 /* Pods-ZaloTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -787,6 +1079,7 @@
 		};
 		0FF7258B27F9964600232D12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0993D6775AF2EC6B8DA6B2E /* Pods-Zalo-ZaloUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -807,6 +1100,7 @@
 		};
 		0FF7258C27F9964600232D12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3C07F102E5807A3CE4756BB /* Pods-Zalo-ZaloUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

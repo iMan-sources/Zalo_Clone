@@ -25,4 +25,24 @@ enum Image {
     static let nextImage = UIImage(systemName: "arrow.right")!.withTintColor(.white, renderingMode: .alwaysOriginal)
     
     static let triangleDown = UIImage(systemName: "arrowtriangle.down.fill")!
+    
+    static let message = UIImage(systemName: "message")!
+    
+    static let contact = UIImage(systemName: "person.crop.square")!
+    
+    static let person = UIImage(systemName: "person")!
+    
+    static let search = UIImage(systemName: "magnifyingglass")!
+    
+    static let plus = UIImage(systemName: "plus")!
+    
+    static let qrScan = UIImage(systemName: "qrcode.viewfinder")!
+    
+    static let phone = UIImage(systemName: "phone")!
+    
+    static let camera = UIImage(systemName: "video")!
+    
+    static let menu = UIImage(systemName: "slider.horizontal.3")!
+    
+    static let send = UIImage(systemName: "paperplane")!
 }

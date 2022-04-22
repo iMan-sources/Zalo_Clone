@@ -13,7 +13,7 @@ struct Section {
 class CountryViewModel{
     // MARK: - Properties
     var needReloadTableView: (()->Void)?
-    var needShowError: ((BaseError)->Void)?
+    var needShowError: ((BaseCountryCodeError)->Void)?
     var names: Country?
     var codes: Country?
     var countries: [CountryPhone] = [CountryPhone]()

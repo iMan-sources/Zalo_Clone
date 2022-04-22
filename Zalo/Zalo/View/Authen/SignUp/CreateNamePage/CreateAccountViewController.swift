@@ -18,7 +18,7 @@ class CreateAccountViewController: SignupViewController {
     private let criteriaStatusView = NameCriteriaStatusView()
 
     // MARK: - Properties
-    static var user: User = User()
+//    static var user: User = User()
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class CreateAccountViewController: SignupViewController {
         textField.endEditing(true)
         //save name newUser
         guard let name = textField.text else { return}
-        CreateAccountViewController.user.setName(name: name)
+//        CreateAccountViewController.user.setName(name: name)
     }
     
     // MARK: - Selector

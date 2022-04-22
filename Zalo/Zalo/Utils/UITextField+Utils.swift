@@ -45,4 +45,6 @@ extension UITextField {
         placeholder = userToggleButton.isSelected ? "Username" : "Số điện thoại"
         self.reloadInputViews()
     }
+    
+    
 }

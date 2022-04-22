@@ -10,7 +10,7 @@ class CountryManager {
     static let shared = CountryManager()
     
     // MARK: - URL
-    func fetchCountryName(url: String, completion: @escaping(Result<Country, BaseError>)->Void){
+    func fetchCountryName(url: String, completion: @escaping(Result<Country, BaseCountryCodeError>)->Void){
         guard let url = URL(string: url) else {
             completion(.failure(.urlError))
             return
@@ -41,7 +41,7 @@ class CountryManager {
         task.resume()
     }
     
-    func fetchCountryCode(url: String,completion: @escaping(Result<Country, BaseError>)->Void){
+    func fetchCountryCode(url: String,completion: @escaping(Result<Country, BaseCountryCodeError>)->Void){
         guard let url = URL(string: url) else {
             completion(.failure(.urlError))
             print(0)

@@ -1,0 +1,6 @@
+framework module Pods_ZaloTests {
+  umbrella header "Pods-ZaloTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

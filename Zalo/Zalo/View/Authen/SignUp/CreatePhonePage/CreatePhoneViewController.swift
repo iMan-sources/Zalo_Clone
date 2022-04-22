@@ -44,8 +44,8 @@ class CreatePhoneViewController: SignupViewController{
         //save phoneNumber newUser
         guard let phoneNumber = textField.text, let code = countryTextField.text else {return}
         
-        CreateAccountViewController.user.setPhoneNumber(number: phoneNumber)
-        CreateAccountViewController.user.setCountryCode(code: code)
+//        CreateAccountViewController.user.setPhoneNumber(number: phoneNumber)
+//        CreateAccountViewController.user.setCountryCode(code: code)
     }
     
     // MARK: - Selector
